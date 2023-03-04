@@ -1,0 +1,145 @@
+<Document.html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Home Page</title>
+        
+        <style>
+          
+#head{position: relative;left: -15%;top: -86%;opacity: 0.9;   visibility: hidden;}
+#stomach{
+  position: relative;
+  left: -22.7%;
+  top: -71.1%;
+  visibility: hidden;
+}
+#body{
+  background-color: blue;
+}
+#settings-button {
+
+width: 4%;
+height: 7%;
+border: 0;
+
+
+}
+.buttonsetter{
+  top: -48%;
+  left: 93%;
+  position: relative;
+}
+
+#lhand{
+  position: relative;
+    left: -35.8%;
+    top: -71%;
+    visibility: hidden;
+}
+#rhand{
+  position: relative;
+  left: -28.4%;
+  top: -71%;
+  visibility: hidden;
+}
+
+#legs{
+  position: relative;
+    left: -40.3%;
+    top: -56.2%;
+    visibility: hidden;
+}
+            #ropes{
+         height: 20%;
+         margin-top: 57%;
+         position: relative;
+         left: -10%;
+         top: -84.2%;
+          visibility: hidden;
+         }
+            #stand{
+               visibility: hidden;
+               height: 63%;
+               top: -52%;
+               position: relative;
+            }
+        </style>
+        <script>
+          
+
+    
+          function setting() {
+                document.getElementById("settings").style.visibility = "visible"
+
+            }
+            function hidesetting() {
+                document.getElementById("settings").style.visibility = "hidden"
+           document.getElementById("body")  .style.background=   document.getElementById("y").value
+
+            }
+
+            function vis(count)
+            {
+                switch (count) {
+  case 1:
+  document.getElementById("stand").style.visibility="visible"
+    break;
+ 
+  case 2:
+  document.getElementById("ropes").style.visibility="visible"
+    break;
+  case 3:
+  document.getElementById("head").style.visibility="visible"
+    break;
+  case 4:
+  document.getElementById("stomach").style.visibility="visible"
+    break;
+  case 5:
+  document.getElementById("lhand").style.visibility="visible"
+    break;
+  case 6:
+  document.getElementById("rhand").style.visibility="visible"
+  break;
+  case 7:
+  document.getElementById("legs").style.visibility="visible"
+  break;
+ 
+  
+}
+           
+            }
+
+            function checkforwinner()
+            {  
+                count=3;
+                if(count>9)
+                window.alert("game over")
+vis(count);
+
+            }
+            </script>
+
+            </head>
+            <body onload="checkforwinner()" id="body">
+
+                <img src="stand.png" id="stand"/>
+                <img src="ropes.jpg" id="ropes" title="rope"/>
+                <img src="1.jpg" id="head"/>
+                <img src="2.jpg" id="stomach" title="rope"/>
+                <img src="3.jpg" id="lhand"/>
+                <img src="4.jpg" id="rhand" title="rope"/>
+                <img src="5.jpg" id="legs" title="rope"/>
+                <div class="buttonsetter">
+                  <button onclick="setting()" id="settings-button" style="background:none"><img src="./settings.png"
+                          height="auto" width="77%"></button>
+                  <div id="settings">
+                      <input id="y" type="color">
+                      
+      
+                      <button onclick="hidesetting()" id="app-button">APPLY</button>
+                  </div>
+              
+            </body>
+            </html>
