@@ -1,0 +1,101 @@
+#head {
+  position: relative;
+  left: -15%;
+  top: -86%;
+  opacity: 0.9;
+  visibility: hidden;
+}
+
+#stomach {
+  position: relative;
+  left: -22.7%;
+  top: -71.1%;
+  visibility: hidden;
+}
+
+#body {
+  background-color: #f2f2de;
+  overflow: hidden;
+}
+
+#settings-button {
+
+  width: 4%;
+  height: 7%;
+  border: 0;
+
+
+}
+
+.buttonsetter {
+  top: -48%;
+  left: 93%;
+  position: relative;
+}
+
+#lhand {
+  position: relative;
+  left: -35.8%;
+  top: -71%;
+  visibility: hidden;
+}
+
+#rhand {
+  position: relative;
+  left: -28.4%;
+  top: -71%;
+  visibility: hidden;
+}
+
+#legs {
+  position: relative;
+  left: -40.3%;
+  top: -56.2%;
+  visibility: hidden;
+}
+
+#ropes {
+  height: 20%;
+  margin-top: 57%;
+  position: relative;
+  left: -10%;
+  top: -84.2%;
+  visibility: hidden;
+}
+
+#stand {
+  visibility: hidden;
+  height: 63%;
+  top: -52%;
+  position: relative;
+}
+
+#keyboard {
+  color: yellow;
+  position: fixed;
+  left: 58%;
+  top: 44%;
+  size: 56%;
+  width: 35%;
+}
+
+.btn {
+  height: 70px;
+  width: 70px;
+  color:red;
+  background-color: yellow;
+  font-size: 30px;
+}
+
+#wordSpotlight {
+  position: relative;
+  left: 72%;
+  top: -127%;
+  font-size: 59px;
+}
+
+#deadman{
+  position: relative;
+  top: -93%;
+  left: 20;
+}

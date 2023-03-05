@@ -1,0 +1,136 @@
+<Document.html>
+  <html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+
+    <link rel="stylesheet" href="home.css">
+
+    <script>
+
+
+
+      function setting() {
+        document.getElementById("settings").style.visibility = "visible"
+
+      }
+      function hidesetting() {
+        document.getElementById("settings").style.visibility = "hidden"
+        document.getElementById("body").style.background = document.getElementById("y").value
+
+      }
+
+      function vis(count) {
+        switch (count) {
+          case 1:
+            document.getElementById("stand").style.visibility = "visible"
+            break;
+
+          case 2:
+            document.getElementById("ropes").style.visibility = "visible"
+            break;
+          case 3:
+            document.getElementById("head").style.visibility = "visible"
+            break;
+          case 4:
+            document.getElementById("stomach").style.visibility = "visible"
+            break;
+          case 5:
+            document.getElementById("lhand").style.visibility = "visible"
+            break;
+          case 6:
+            document.getElementById("rhand").style.visibility = "visible"
+            break;
+          case 7:
+            document.getElementById("legs").style.visibility = "visible"
+            break;
+
+
+        }
+
+      }
+
+      function checkforwinner() {
+        generateButtons()
+
+        count = 1;
+        if (count > 9)
+          window.alert("game over")
+        vis(count);
+
+      }
+
+      function generateButtons() {
+
+        let buttonsHTML = 'abcdefghijklmnopqrstuvwxyz'.split('').map(letter =>
+          `
+      <button 
+        class="btn"
+        id='` + letter + `'
+        onClick="handleGuess('` + letter + `')"
+      >
+        ` + letter + `
+      </button>
+    `).join('');
+
+        document.getElementById("keyboard").innerHTML = buttonsHTML;
+      }
+      let wordStatus = null
+      let guessed = []
+      let answer = 'hello'
+
+      function handleGuess(chosenLetter) {
+        guessed.indexOf(chosenLetter) === -1 ? guessed.push(chosenLetter) : null;
+        document.getElementById(chosenLetter).setAttribute('disabled', true);
+
+        if (answer.indexOf(chosenLetter) >= 0) {
+          Word();
+
+        }
+      }
+
+      function Word() {
+        wordStatus = answer.split('').map(letter => (guessed.indexOf(letter) >= 0 ? letter : " _ ")).join('');
+
+        document.getElementById("wordSpotlight").innerHTML = wordStatus;
+        console.log(wordStatus)
+      }
+
+
+
+
+
+
+    </script>
+
+  </head>
+
+  <body onload="checkforwinner()" id="body">
+
+    <img src="stand.png" id="stand" />
+    <img src="ropes.jpg" id="ropes" title="rope" />
+    <img src="1.jpg" id="head" />
+    <img src="2.jpg" id="stomach" title="rope" />
+    <img src="3.jpg" id="lhand" />
+    <img src="4.jpg" id="rhand" title="rope" />
+    <img src="5.jpg" id="legs" title="rope" />
+    <div class="buttonsetter">
+      <button onclick="setting()" id="settings-button" style="background:none"><img src="./settings.png" height="auto"
+          width="77%"></button>
+      <div id="settings">
+        <input id="y" type="color">
+      </div>
+
+
+      <button onclick="hidesetting()" id="app-button">APPLY</button>
+    </div>
+    <img src="deadman.gif" id="deadman">
+    <h1 id="wordSpotlight">hola</h1>
+    <div id="keyboard"></div>
+
+  </body>
+
+  </html>
