@@ -1,0 +1,39 @@
+.new-game-popup {
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0.6em;
+  }
+  #result-text h2 {
+    font-size: 1.8em;
+    text-align: center;
+  }
+  #result-text p {
+    font-size: 1.25em;
+    margin: 1em 0 2em 0;
+  }
+  #result-text span {
+    font-weight: 600;
+  }
+  #new-game-button {
+    font-size: 1.25em;
+    padding: 0.5em 1em;
+    background-color: #8c52ff;
+    border: 3px solid #000000;
+    color: #fff;
+    border-radius: 0.2em;
+    cursor: pointer;
+  }
+  .win-msg {
+    color: #39d78d;
+  }
+  .lose-msg {
+    color: #fe5152;
+  }

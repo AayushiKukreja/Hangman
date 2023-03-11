@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="lose.css">
+</head>
+<body>
+     <div id="new-game-container" class="new-game-popup hide">
+        <div id="result-text">
+        <h2 class='lose-msg'>You Lose!!</h2><p>The word was <span id="msg"></span></p>
+        </div>
+        <button id="new-game-button" onclick="newGame()">New Game</button>
+    </div>
+    <script>
+        var answer=localStorage.getItem("answer"); 
+        console.log(answer);
+        document.getElementById("msg").innerText=answer
+
+        function newGame()
+        {
+            window.location="home.html" ;
+        }
+    </script>
+</body>
+</html>

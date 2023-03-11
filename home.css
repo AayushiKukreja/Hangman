@@ -8,8 +8,10 @@
 
 #stomach {
   position: relative;
-  left: -22.7%;
-  top: -71.1%;
+  left: -24.9%;
+  right:60px;
+  top: -65.8%;
+  /* margin-bottom: 10px; */
   visibility: hidden;
 }
 
@@ -19,12 +21,9 @@
 }
 
 #settings-button {
-
-  width: 4%;
+ width: 4%;
   height: 7%;
   border: 0;
-
-
 }
 
 .buttonsetter {
@@ -35,22 +34,24 @@
 
 #lhand {
   position: relative;
-  left: -35.8%;
-  top: -71%;
+  left: -40.8%;
+  top: -67%;
   visibility: hidden;
 }
 
 #rhand {
   position: relative;
-  left: -28.4%;
-  top: -71%;
+  /* left: -28.4%;
+  top: -71%; */
+  left: -32.7%;
+  top: -67%;
   visibility: hidden;
 }
 
 #legs {
   position: relative;
-  left: -40.3%;
-  top: -56.2%;
+  left: -47.3%;
+  top: -45.8%;
   visibility: hidden;
 }
 
@@ -68,28 +69,36 @@
   height: 63%;
   top: -52%;
   position: relative;
+  left:60px
 }
 
 #keyboard {
-  color: yellow;
   position: fixed;
   left: 58%;
   top: 44%;
   size: 56%;
   width: 35%;
+  align-items: center;
 }
 
 .btn {
-  height: 70px;
-  width: 70px;
-  color:red;
-  background-color: yellow;
-  font-size: 30px;
+    height: 70px;
+    width: 70px;
+    font-size: 30px; 
+    background-color:#C7E8CA;
+    border: none;
+    display: inline-block;
+    padding: .5rem 1rem;
+    margin: .3rem;
+    font-size: 1.3rem;
+    width: 50px;
+    height: 50px;
+    border-radius: .5rem;
 }
 
 #wordSpotlight {
   position: relative;
-  left: 72%;
+  left: 65%;
   top: -127%;
   font-size: 59px;
 }
